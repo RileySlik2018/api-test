@@ -6,7 +6,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-    app: riley-api
+      app: riley-api
   template:
     metadata:
       labels:
@@ -14,17 +14,17 @@ spec:
     spec:
       containers:
         - name: riley-api
-        
-        image: uus-docker.pkg.dev/cit262-teamproject/riley-api/api-test
-        ports:
-          - containerPort: 3000
-        resources:
-          limits:
-            cpu: ".5"
-            memory: "500Mi"
-          requests:
-            cpu: ".25"
-            memory: "250Mi"
+        # This image is going to be the path to the image you create in a future step
+          image: us-docker.pkg.dev/cit262-teamproject/riley-api/api-test
+          ports:
+            - containerPort: 3000
+          resources:
+            limits:
+              cpu: ".5"
+              memory: "500Mi"
+            requests:
+              cpu: ".25"
+              memory: "250Mi"
           livenessProbe:
             httpGet:
               path: /
@@ -41,4 +41,3 @@ spec:
             failureThreshold: 30
             periodSeconds: 10
             timeoutSeconds: 10
-

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: riley-api
-        # This image is going to be the path to the image you create in a future step
+        
         image: us-docker.pkg.dev/cit262-teamproject/riley-api/api-test
         ports:
           - containerPort: 3000

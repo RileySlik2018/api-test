@@ -15,7 +15,7 @@ spec:
       containers:
         - name: riley-api
         
-        image: us-docker.pkg.dev/cit262-teamproject/riley-api/api-test
+        image: uus-docker.pkg.dev/cit262-teamproject/riley-api/api-test
         ports:
           - containerPort: 3000
         resources:
